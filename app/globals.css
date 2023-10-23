@@ -28,6 +28,16 @@
     p{
         @apply text-sm text-default
     }
+    form{
+        @apply rounded-xl p-2
+    }
+    input,select,textarea{
+        @apply m-1 rounded-md p-1 bg-card
+    }
+    label{
+        @apply mt-4
+    
+    }
 }
 
 @layer components{
