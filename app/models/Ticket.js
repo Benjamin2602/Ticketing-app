@@ -1,16 +1,16 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose from "mongoose";
 
 mongoose.connect(process.env.MONGODB_URI);
 mongoose.Promise = global.Promise;
 
-const TicketSchema = new Schema(
+const ticketSchema = new mongoose.Schema(
   {
     title: String,
     description: String,
     category: String,
     priority: Number,
-    status: String,
     progress: Number,
+    status: String,
     active: Boolean,
   },
   {
@@ -18,5 +18,6 @@ const TicketSchema = new Schema(
   }
 );
 
-const Ticket = mongoose.model.Ticket || mongoose.model("Ticket", TicketSchema);
+const Ticket = mongoose.models.tickets || mongoose.model("tickets", ticketSchema);
+
 export default Ticket;
