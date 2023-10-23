@@ -1,5 +1,8 @@
+import {connect} from "../../dbConfig/dbConfig";
 import Ticket from "../../models/Ticket";
 import { NextResponse } from "next/server";
+
+connect();
 
 export async function POST() {
   try {
