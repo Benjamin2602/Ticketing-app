@@ -21,7 +21,7 @@ const TicketCard = () => {
       <div className="flex-grow"></div>
       <div className="flex mt-2">
         <div className="flex flex-col">
-          <p text-xs my-1>
+          <p className="text-xs my-1">
             23/10/23 4:07pm
           </p>
           <ProgressBarDisplay />
