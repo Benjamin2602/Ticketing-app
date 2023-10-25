@@ -4,9 +4,10 @@ import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const EditTicketForm = () => {
-    const router = useRouter();
+  const router = useRouter();
   //event handler
   const handleChange = (e) => {
+    console.log(formData)
     const value = e.target.value;
     const name = e.target.name;
     // setFormData({...formData, [e.target.name]: e.target.value})
@@ -25,13 +26,13 @@ const EditTicketForm = () => {
     });
 
     if (!res.ok) {
-        // Assuming the API response contains error details as JSON
-        const errorData = await res.json();
-        console.error("Failed to create ticket. Error details:", errorData);
-        throw new Error("Failed to create ticket");
-      }
-      router.refresh();
-      router.push("/");
+      // Assuming the API response contains error details as JSON
+      const errorData = await res.json();
+      console.error("Failed to create ticket. Error details:", errorData);
+      throw new Error("Failed to create ticket");
+    }
+    router.refresh();
+    router.push("/");
   };
 
   const startingTicketData = {

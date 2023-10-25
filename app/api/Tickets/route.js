@@ -1,10 +1,8 @@
-import {connect} from "../../dbConfig/dbConfig";
 import Ticket from "../../models/Ticket";
 import { NextResponse } from "next/server";
 
-connect();
 
-export async function POST() {
+export async function POST(req, res) {
   try {
     const body = await req.json();
     const ticketData = body.formData;
