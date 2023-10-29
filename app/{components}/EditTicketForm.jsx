@@ -7,7 +7,7 @@ const EditTicketForm = () => {
   const router = useRouter();
   //event handler
   const handleChange = (e) => {
-    console.log(formData)
+    console.log(formData);
     const value = e.target.value;
     const name = e.target.name;
     // setFormData({...formData, [e.target.name]: e.target.value})
