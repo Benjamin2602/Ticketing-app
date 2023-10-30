@@ -18,7 +18,7 @@ const getTickets = async () => {
 };
 
 const Dashboard = async () => {
-  const { tickets } = await getTickets();
+  const  {tickets}  = await getTickets();
 
   const uniqueCategories = [
     // set is a data structure that only allows unique values
