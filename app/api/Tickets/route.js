@@ -25,6 +25,7 @@ export async function POST(req, res) {
 export async function GET() {
   try {
     const tickets = await Ticket.find();
+    console.log(tickets);
     return NextResponse.json({
       status: 200,
       message: "Tickets fetched successfully",
